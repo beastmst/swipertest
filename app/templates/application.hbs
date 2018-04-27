@@ -1,5 +1,29 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+current slide: {{currentSlide}}
+<br>
+{{#swiper-container
+          currentSlide=currentSlide
+          slidesPerView=1 
+          grabCursor=true 
+          autoplay=(hash delay=9600)
+}}
+            {{#swiper-slide}}<h2>slide 1</h2>{{/swiper-slide}}
+            {{#swiper-slide}}<h2>slide 2</h2>{{/swiper-slide}}
+            {{#swiper-slide}}<h2>slide 3</h2>{{/swiper-slide}}
+{{/swiper-container}}
 
-{{outlet}}
+
+
+
+{{#swiper-container
+
+   currentSlide=currentSlide2 
+   loop=true 
+   centered=true slidesPerView=2
+
+}}
+            {{#swiper-slide}}<h2>slide 1</h2>{{/swiper-slide}}
+            {{#swiper-slide}}<h2>slide 2</h2>{{/swiper-slide}}
+            {{#swiper-slide}}<h2>slide 3</h2>{{/swiper-slide}}
+{{/swiper-container}}
+
+
